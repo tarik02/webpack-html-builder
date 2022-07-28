@@ -1,6 +1,6 @@
 {
   "name": "webpack-html-builder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "homepage": "https://github.com/Tarik02/webpack-hot-lock-plugin#readme",
   "bugs": {
@@ -26,8 +26,8 @@
     "./client/index.js": "./client/dist/index.js"
   },
   "files": [
-    "dist/*",
-    "client/dist/*"
+    "dist/**/*",
+    "client/dist/**/*"
   ],
   "scripts": {
     "watch": "tsc --watch",
