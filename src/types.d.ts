@@ -31,16 +31,16 @@ declare module 'vdom-to-html' {
   export = vdomToHtml;
 }
 
-declare module 'vdom-as-json/toJson' {
+declare module 'vdom-serialized-patch/serialize' {
   import { VNode, VText, VPatch } from 'virtual-dom';
 
-  function vdomToJson(vdom: VNode | VText | VPatch | VPatch[]): any;
-  export = vdomToJson;
+  function serialize(vdom: VPatch | VPatch[]): any;
+  export = serialize;
 }
 
-declare module 'vdom-as-json/fromJson' {
-  import { VNode, VText, VPatch } from 'virtual-dom';
+declare module 'vdom-serialized-patch/patch' {
+  import { VPatch } from 'virtual-dom';
 
-  function vdomFromJson(json: any): VNode | VText | VPatch | VPatch[];
-  export = vdomFromJson;
+  function applyPatch(node: Element, patch: any): VPatch | VPatch[];
+  export = applyPatch;
 }

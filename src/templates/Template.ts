@@ -1,11 +1,11 @@
 
 import * as htmlToVdom from 'html-to-vdom';
-import vdomToHtml = require('vdom-to-html');
-import vdomToJson = require('vdom-as-json/toJson');
-import { h, diff, VNode, VPatch } from 'virtual-dom';
-import isVNode = require('virtual-dom/vnode/is-vnode');
+import { diff, h, VNode, VPatch } from 'virtual-dom';
 import * as VNodeConstructor from 'virtual-dom/vnode/vnode';
 import * as VTextConstructor from 'virtual-dom/vnode/vtext';
+import vdomToHtml = require('vdom-to-html');
+import serializePatch = require('vdom-serialized-patch/serialize');
+import isVNode = require('virtual-dom/vnode/is-vnode');
 
 
 export type VirtualDocument = {
@@ -85,8 +85,8 @@ export class Template {
     [this.currentDocumentData, this.currentDocument] = parseDocument(content);
 
     const patch = {
-      head: vdomToJson(diff(oldDocument.head, this.currentDocument.head)),
-      body: vdomToJson(diff(oldDocument.body, this.currentDocument.body)),
+      head: serializePatch(diff(oldDocument.head, this.currentDocument.head)),
+      body: serializePatch(diff(oldDocument.body, this.currentDocument.body)),
     };
 
     return patch;

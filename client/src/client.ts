@@ -1,5 +1,4 @@
-import { patch } from 'virtual-dom';
-import vdomFromJson from 'vdom-as-json/fromJson';
+import applyPatch from 'vdom-serialized-patch/patch';
 
 const scriptParams = ((params: URLSearchParams) => ({
   template: params.get('template')!,
@@ -40,8 +39,8 @@ source.addEventListener('message', event => {
 
     case 'patch':
       try {
-        patch(document.head, vdomFromJson(message.payload.patch.head));
-        patch(document.body, vdomFromJson(message.payload.patch.body));
+        applyPatch(document.head, message.payload.patch.head);
+        applyPatch(document.body, message.payload.patch.body);
       } catch (e) {
         console.error(e);
         console.log('[webpack-html-builder] Error while patching dom. Reloading');
