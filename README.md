@@ -1,5 +1,9 @@
 # webpack-html-builder
 
+![Check](https://github.com/Tarik02/webpack-html-builder/actions/workflows/check.yml/badge.svg)
+![Publish to NPM](https://github.com/Tarik02/webpack-html-builder/actions/workflows/publish-to-npm.yml/badge.svg)
+[![npm version](https://badge.fury.io/js/webpack-html-builder.svg)](https://badge.fury.io/js/webpack-html-builder)
+
 ## Installation
 
 ```bash

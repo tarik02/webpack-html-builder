@@ -2,13 +2,13 @@
   "name": "webpack-html-builder",
   "version": "0.1.1",
   "license": "MIT",
-  "homepage": "https://github.com/Tarik02/webpack-hot-lock-plugin#readme",
+  "homepage": "https://github.com/Tarik02/webpack-html-builder#readme",
   "bugs": {
-    "url": "https://github.com/Tarik02/webpack-hot-lock-plugin/issues"
+    "url": "https://github.com/Tarik02/webpack-html-builder/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tarik02/webpack-hot-lock-plugin.git"
+    "url": "git+https://github.com/Tarik02/webpack-html-builder.git"
   },
   "exports": {
     ".": {
