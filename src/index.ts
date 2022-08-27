@@ -48,7 +48,9 @@ class LazyHtmlPlugin {
   apply(compiler: Webpack.Compiler): void {
     const options: OptionsNormalized = {
       publicPath: this.options.publicPath.replace(/(^[\\\/]*|[\\\/]*$)/g, ''),
-      context: Path.join(compiler.context, this.options.context),
+      context: Path.isAbsolute(this.options.context)
+        ? this.options.context
+        : Path.join(compiler.context, this.options.context),
       inputGlob: this.options.inputGlob ?? '*',
       forceAll: this.options.forceAll ?? false,
     };
