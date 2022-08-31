@@ -23,7 +23,7 @@ declare module 'html-to-vdom' {
   export = initialize;
 }
 
-declare module 'vdom-to-html' {
+declare module '@tarik02/vdom-to-html' {
   import { VNode, VText } from 'virtual-dom';
 
   function vdomToHtml(vdom: VNode | VText, parent?: { tagName: 'script' | 'style' }): string;
@@ -31,14 +31,14 @@ declare module 'vdom-to-html' {
   export = vdomToHtml;
 }
 
-declare module 'vdom-serialized-patch/serialize' {
+declare module '@tarik02/vdom-serialized-patch/serialize' {
   import { VNode, VText, VPatch } from 'virtual-dom';
 
   function serialize(vdom: VPatch | VPatch[]): any;
   export = serialize;
 }
 
-declare module 'vdom-serialized-patch/patch' {
+declare module '@tarik02/vdom-serialized-patch/patch' {
   import { VPatch } from 'virtual-dom';
 
   function applyPatch(node: Element, patch: any): VPatch | VPatch[];

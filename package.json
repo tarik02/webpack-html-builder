@@ -37,14 +37,14 @@
     "prepack": "yarn build && yarn client:build"
   },
   "dependencies": {
+    "@tarik02/vdom-serialized-patch": "^1.0.8",
+    "@tarik02/vdom-to-html": "^2",
     "express": "^4.18.1",
     "glob": "*",
     "glob-promise": "*",
     "html-loader": "^4",
     "html-to-vdom": "^0.7",
     "md5": "^2",
-    "vdom-serialized-patch": "^1.0.8",
-    "vdom-to-html": "^2",
     "virtual-dom": "^2"
   },
   "devDependencies": {

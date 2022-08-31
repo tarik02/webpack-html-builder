@@ -1469,6 +1469,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tarik02/vdom-serialized-patch@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "@tarik02/vdom-serialized-patch@npm:1.0.8"
+  dependencies:
+    vdom-as-json: 1.0.9
+  checksum: 9118c9e8c28770b1dae8fd1f9fcc2193f66bfb702334e1261fe9881865f320959cd784e78ffb42da919c9d7796d2ccb7d09a8c29f5e37e7bd231a5f7e5734ea5
+  languageName: node
+  linkType: hard
+
+"@tarik02/vdom-to-html@npm:^2":
+  version: 2.3.1
+  resolution: "@tarik02/vdom-to-html@npm:2.3.1"
+  dependencies:
+    escape-html: ^1.0.1
+    param-case: ^1.0.1
+    xtend: ^4.0.0
+  peerDependencies:
+    virtual-dom: ^2.0.0
+  checksum: 98eb68dce6f5f021e8c33f41a915a1b1402100efa2152b65e9e284291c5916dd99b5c4cdb36858e9006df048e9e3a6c75ce3373250029f6d3d6ab5f6cbf6b3e3
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -5469,28 +5491,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vdom-serialized-patch@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "vdom-serialized-patch@npm:1.0.8"
-  dependencies:
-    vdom-as-json: 1.0.9
-  checksum: e8cb4ad97349abb505efd32f42db9540ab10124f8949b88e42c7b00f51e4de91cc0ddbb249f552a4d47d9d7e1d1d5628322fbacbe5124dc3b59139196ff629b7
-  languageName: node
-  linkType: hard
-
-"vdom-to-html@npm:^2":
-  version: 2.3.1
-  resolution: "vdom-to-html@npm:2.3.1"
-  dependencies:
-    escape-html: ^1.0.1
-    param-case: ^1.0.1
-    xtend: ^4.0.0
-  peerDependencies:
-    virtual-dom: ^2.0.0
-  checksum: 8bfb04a51241b7a5272f04ea7b3dd7dd11a87c7297dda188249a04bd6b628c22dfa94f4bd9539478b611aee7dbef458eed366d4246b2afcf0dc3d1ba1eeb7d55
-  languageName: node
-  linkType: hard
-
 "virtual-dom@npm:^2, virtual-dom@npm:^2.1.1":
   version: 2.1.1
   resolution: "virtual-dom@npm:2.1.1"
@@ -5626,6 +5626,8 @@ __metadata:
     "@babel/preset-env": ^7.18.9
     "@babel/preset-react": ^7.18.6
     "@babel/preset-typescript": ^7.18.6
+    "@tarik02/vdom-serialized-patch": ^1.0.8
+    "@tarik02/vdom-to-html": ^2
     "@types/node": ^18.6.1
     "@types/virtual-dom": ^2.1.1
     babel-loader: ^8.2.5
@@ -5639,8 +5641,6 @@ __metadata:
     preact: ^10.10.0
     preact-render-to-string: ^5.2.1
     typescript: ^4.7.4
-    vdom-serialized-patch: ^1.0.8
-    vdom-to-html: ^2
     virtual-dom: ^2
     webpack: ^5.74.0
     webpack-cli: ^4.10.0

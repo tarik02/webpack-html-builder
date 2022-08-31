@@ -1,4 +1,4 @@
-import applyPatch from 'vdom-serialized-patch/patch';
+import applyPatch from '@tarik02/vdom-serialized-patch/patch';
 
 const scriptParams = ((params: URLSearchParams) => ({
   template: params.get('template')!,
