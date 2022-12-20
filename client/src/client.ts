@@ -11,6 +11,8 @@ const sourceUrl = new URL('webpack-html-builder/__events', base);
 sourceUrl.searchParams.set('template', scriptParams.template);
 const source = new window.EventSource(sourceUrl);
 
+document.currentScript!.remove();
+
 type PatchData = {
   head: any;
   body: any;

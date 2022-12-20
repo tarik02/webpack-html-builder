@@ -46,8 +46,8 @@ const parseDocument = (content: string): [DocumentData, VirtualDocument] => {
 
   const data = `<!doctype html>${ vdomToHtml($html) }`;
 
-  newDocument.head.children = newDocument.head.children.filter(el => !isVNode(el) || el.tagName.toLowerCase() !== 'script');
-  newDocument.body.children = newDocument.body.children.filter(el => !isVNode(el) || el.tagName.toLowerCase() !== 'script');
+  // newDocument.head.children = newDocument.head.children.filter(el => !isVNode(el) || el.tagName.toLowerCase() !== 'script');
+  // newDocument.body.children = newDocument.body.children.filter(el => !isVNode(el) || el.tagName.toLowerCase() !== 'script');
 
   return [data, newDocument];
 };
