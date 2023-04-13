@@ -1,5 +1,5 @@
 import * as Express from 'express';
-import * as globPromise from 'glob-promise';
+import { glob } from 'glob';
 import * as Path from 'path';
 import * as Webpack from 'webpack';
 import { DefaultPathMapper } from './path/DefaultPathMapper';
@@ -22,11 +22,11 @@ type Options = {
   forceAll?: boolean | undefined;
   pathMapper?: (
     | undefined
-    | {
+    | Partial<{
       inputLoader: string;
       inputSuffix: string;
       outputSuffix: string;
-    }
+    }>
     | PathMapper
   );
 };
@@ -191,7 +191,7 @@ class LazyHtmlPlugin {
       if (devTemplatesManager !== undefined && !options.forceAll) {
         compilationTemplates = devTemplatesManager.templateNames();
       } else {
-        compilationTemplates = (await globPromise(options.inputGlob, {
+        compilationTemplates = (await glob(options.inputGlob, {
           cwd: options.context,
           fs: compiler.inputFileSystem as any,
         }))
